@@ -1,0 +1,159 @@
+/*
+Global stylesheet for http://sdonnelly.co.uk.
+
+Written in SCSS.
+
+By Shaun Donnelly
+hello@sdonnelly.co.uk
+Last updated 5th June 2013.
+*/
+
+/* 
+Variables. 
+*/
+
+/* Widths and spacings. */
+$container-width: 60%;
+$std-line-height: 18px;
+
+/* Fonts. */
+$header-font: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+$main-font: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+
+$std-font-size: 14px;
+$header-font-size: 36px;
+
+/* Colours. */
+$link-color: #2ba6cb;
+$std-font-color: #222222;
+$filled-color: #2ba6cb;
+$white: #f6f6f6;
+
+/*
+Mixins.
+*/
+
+/* Mixin for adding vendor prefixes.
+	Only works when the syntax for every
+	vendor is the same.
+*/
+@mixin vendor-prefixes($property, $value) {
+
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-o-#{$property}: $value;
+	-ms-#{$property}: $value;
+	#{$property}: $value;
+}
+
+/*
+Styles.
+*/
+
+body {
+	margin: 0;
+	color: $std-font-color;
+	font-family: $main-font;
+	font-size: $std-font-size;
+	line-height: $std-line-height;
+}
+
+/* Container. */
+div.container {
+	width: $container-width;
+	margin: 0 auto;
+	padding: 5%;
+}
+
+/* Links. */
+
+/* Standard link. */
+a {
+	text-decoration: none;
+	font-family: $main-font;
+	color: $link-color;
+	@include vendor-prefixes(transition, all 0.1s);
+	&:hover {
+		color: lighten($link-color, 10%);
+	}
+}
+
+/* Headers. */
+
+h1, h2, h3, h4, h5, h6 {
+
+	font-family: $header-font;
+	font-weight: 100;
+}
+
+h1 {
+
+	font-size: $header-font-size;
+}
+
+h2 {
+
+	font-size: $header-font-size * 0.75;
+}
+
+h3 {
+
+	font-size: $header-font-size * 0.5;
+}
+
+/* Lists. */
+
+ul.gridlist {
+
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	clear: both;
+	
+	a {
+	
+		display: inline-block;
+		float: left;
+		width: 33%;
+		max-width: 200px;
+		min-width: 100px;
+		font-size: $std-font-size * 1.25;
+		height: 100px;
+		line-height: 100px;
+		background-color: $filled-color;
+		text-align: center;
+		color: $white;
+		margin: 5px;
+		box-sizing: border-box;
+		border-radius: 2px;
+		@include vendor-prefixes(transition, all 0.2s);
+		
+		&:hover {
+		
+			background-color: darken($filled-color, 5%);
+		}
+	}
+}
+
+/* Utility classes. */
+
+.full-width {
+	
+	width: 100%;
+}
+
+.filled {
+
+	background-color: $filled-color;
+	color: $white;
+	
+	h1, h2, h3, h4, h5, h6, p {
+	
+		color: $white;
+	}
+	
+}
+
+
+
+

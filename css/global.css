@@ -1,0 +1,54 @@
+/*
+Global stylesheet for http://sdonnelly.co.uk.
+
+Written in SCSS.
+
+By Shaun Donnelly
+hello@sdonnelly.co.uk
+Last updated 5th June 2013.
+*/
+/* 
+Variables. 
+*/
+/* Widths and spacings. */
+/* Fonts. */
+/* Colours. */
+/*
+Mixins.
+*/
+/* Mixin for adding vendor prefixes.
+	Only works when the syntax for every
+	vendor is the same.
+*/
+/*
+Styles.
+*/
+body { margin: 0; color: #222222; font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-size: 14px; line-height: 18px; }
+
+/* Container. */
+div.container { width: 60%; margin: 0 auto; padding: 5%; }
+
+/* Links. */
+/* Standard link. */
+a { text-decoration: none; font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; color: #2ba6cb; -webkit-transition: all 0.1s; -moz-transition: all 0.1s; -o-transition: all 0.1s; -ms-transition: all 0.1s; transition: all 0.1s; }
+a:hover { color: #4fbada; }
+
+/* Headers. */
+h1, h2, h3, h4, h5, h6 { font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-weight: 100; }
+
+h1 { font-size: 36px; }
+
+h2 { font-size: 27px; }
+
+h3 { font-size: 18px; }
+
+/* Lists. */
+ul.gridlist { list-style-type: none; margin: 0; padding: 0; clear: both; }
+ul.gridlist a { display: inline-block; float: left; width: 33%; max-width: 200px; min-width: 100px; font-size: 17.5px; height: 100px; line-height: 100px; background-color: #2ba6cb; text-align: center; color: #f6f6f6; margin: 5px; box-sizing: border-box; border-radius: 2px; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; -ms-transition: all 0.2s; transition: all 0.2s; }
+ul.gridlist a:hover { background-color: #2795b6; }
+
+/* Utility classes. */
+.full-width { width: 100%; }
+
+.filled { background-color: #2ba6cb; color: #f6f6f6; }
+.filled h1, .filled h2, .filled h3, .filled h4, .filled h5, .filled h6, .filled p { color: #f6f6f6; }
