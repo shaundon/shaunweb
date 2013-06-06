@@ -6,9 +6,26 @@
 		%title Shaun Donnelly	
 		%link(rel="stylesheet" href="css/global.css" type="text/css")
 		%link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" type="text/css")
-
-	
+		%script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js")
+		%script(src="global.js")
 	%body
+	
+		.menu-container
+			.menu-trigger Pages
+			%ul.menu-inner
+				%li
+					%a(href="#") Home
+				%li
+					%a(href="#") One
+				%li
+					%a(href="#") Two
+				%li
+					%a(href="#") Three
+				%li
+					%a(href="#") Four
+				%li
+					%a(href="#") ..etc
+	
 		.full-width.filled	
 			.container
 				%h1 Title Text	

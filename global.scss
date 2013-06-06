@@ -28,6 +28,7 @@ $link-color: #2ba6cb;
 $std-font-color: #222222;
 $filled-color: #2ba6cb;
 $white: #f6f6f6;
+$menu-color: #444;
 
 /*
 Mixins.
@@ -63,6 +64,63 @@ div.container {
 	width: $container-width;
 	margin: 0 auto;
 	padding: 5%;
+}
+
+/* Styles for the menu pop-out. */
+
+div.menu-container {
+
+	position: fixed;
+	left: 15px;
+	top: 15px;
+	width: 150px;
+	height: 300px;
+	
+	.menu-trigger {
+	
+		background-color: $menu-color;
+		width: 50px;
+		height: 30px;
+		font-size: $std-font-size;
+		line-height: 30px;
+		color: $white;
+		text-align: center;
+		cursor: pointer;
+		
+		
+		&:hover {
+			
+			background-color: lighten($menu-color, 15%);
+		}
+	}
+	
+	ul.menu-inner {
+	
+		display: none;
+		background-color: #444;
+		padding: 0;
+		margin: 0;
+	
+		list-style-type: none;
+		
+		li:first-child {
+			font-weight: 700;
+		}
+		
+		a {
+			width: 90%;
+			display: inline-block;
+			height: 40px;
+			line-height: 40px;
+			padding-left: 10%;
+			color: lighten($link-color, 20%);
+			
+			&:hover {
+			
+				background-color: lighten($menu-color, 15%);
+			}
+		}
+	}
 }
 
 /* Links. */
