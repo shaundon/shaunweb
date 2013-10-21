@@ -1,1 +1,0 @@
-$(document).on("click",".menu-trigger",function(){$(".menu-inner").is(":visible")?$(".menu-inner").slideUp("fast"):$(".menu-inner").slideDown("fast")});
